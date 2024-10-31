@@ -1,0 +1,248 @@
+{
+    "info": {
+        "_postman_id": "b2c2a59a-4d5f-4c3b-8513-6891e7f91d93",
+        "name": "Subscription Platform API",
+        "description": "Collection of API requests for the subscription platform.",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Website",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"name\":\"Sample Website 1\",\"url\":\"https://samplewebsite1.com\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/websites",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "websites"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create User",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"email\":\"user1@example.com\",\"name\":\"User 1\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/users",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "users"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Subscribe User to Website",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"user_id\": 1, \"website_id\": 1}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/subscriptions",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "subscriptions"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Create Post for Website",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"website_id\": 1, \"title\": \"New Post Title\", \"description\": \"Description of the new post.\"}"
+                },
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/posts",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "posts"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Websites",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/websites",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "websites"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Users",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/users",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "users"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Subscriptions",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/subscriptions",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "subscriptions"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Posts for a Website",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/websites/1/posts",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "websites",
+                        "1",
+                        "posts"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Check Notifications for a User",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/users/1/notifications",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "users",
+                        "1",
+                        "notifications"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Send Notifications",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/send-notifications",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "send-notifications"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get a Specific Website",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://127.0.0.1:8000/api/websites/1",
+                    "host": [
+                        "127.0.0.1"
+                    ],
+                    "port": "8000",
+                    "path": [
+                        "api",
+                        "websites",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
